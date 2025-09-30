@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: product-service
+  datasource:
+#    url: jdbc:postgresql://localhost:5432/productdb
+    url: jdbc:postgresql://ep-rapid-dawn-a1d66473-pooler.ap-southeast-1.aws.neon.tech/productdb?user=neondb_owner&password=npg_rwE9Xnum8ovP&sslmode=require&channelBinding=require
+    username: diwakar
+    password: diwakar
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    #  h2:
+    #    console:
+    #      enabled: true
+    #      settings:
+    #        web-allow-others: true
+    #  datasource:
+    #    url: jdbc:h2:mem:test
+    #  jpa:
+    #    show-sql: true
+    #    hibernate:
+    #      ddl-auto: create
+    #  logging:
+    level:
+      root: TRACE        # show warnings and errors for everything
+      org.springframework: TRACE
+      org.hibernate: TRACE
+      org.h2: TRACE
+server:
+  port: 8081
