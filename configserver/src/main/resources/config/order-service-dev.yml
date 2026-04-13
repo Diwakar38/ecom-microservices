@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: order-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/orderdb
+    username: diwakar
+    password: diwakar
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    level:
+      root: TRACE        # show warnings and errors for everything
+      org.springframework: TRACE
+      org.hibernate: TRACE
+      org.h2: TRACE
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          refresh
+
+server:
+  port: 8083

@@ -1,5 +1,0 @@
-build:
-  id: 102
-  version: 1.1.2
-  name: "Prod Branch"
-  type: "Prod build"
