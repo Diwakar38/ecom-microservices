@@ -1,6 +1,6 @@
 spring:
   application:
-    name: order-service-dev
+    name: product-service-dev
   datasource:
     url: ${DB_URL}
     username: ${DB_USERNAME}
@@ -10,7 +10,7 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: update
-#    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    # database-platform: org.hibernate.dialect.PostgreSQLDialect
   logging:
     level:
       root: TRACE        # show warnings and errors for everything
@@ -32,4 +32,4 @@ management:
           refresh
 
 server:
-  port: 8083
+  port: 8081
